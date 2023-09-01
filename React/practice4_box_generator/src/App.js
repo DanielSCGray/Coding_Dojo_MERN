@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import ColorBox from './components/ColorBox';
+import DisplayBox from './components/DisplayBox';
 
 function App() {
   return (
@@ -18,6 +20,11 @@ function App() {
           Learn React
         </a>
       </header>
+      const
+
+      <ColorBox></ColorBox>
+      <DisplayBox boxList={boxList}/>
+      
     </div>
   );
 }
