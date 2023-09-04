@@ -1,5 +1,4 @@
-import { useState } from "react";
-import ColorBox from "./ColorBox";
+
 
 const DisplayBox = (props) => {
     
@@ -10,7 +9,7 @@ const DisplayBox = (props) => {
         <div className='container'>
             {
                 props.boxList.map( (box, i) =>
-                <div key={i} style={box}></div>)
+                <div key={i}  style={{margin: 10, display: 'inline-flex', height: box.size +'px',width: box.size +'px',background: box.color, }}></div>)
             }
         </div>
     )

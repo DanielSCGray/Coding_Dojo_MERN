@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const ColorBox = (props) => {
 
-    const [boxList, addBox] = useState([]);
+    
     const [color, setColor] = useState('');
     const [size, setSize] = useState('');
 
@@ -10,22 +10,11 @@ const ColorBox = (props) => {
 
     const createBox = (e) => {
         e.preventDefault();
-        const newBox = {color, size}
+        const newBox = {color, size};
+        props.onNewBox(newBox);
         setColor('');
         setSize('');
-        addBox([...boxList, newBox])
-
-    }
-
-    // const displayBoxes = (array) => {
-    //     let output = '';
-    //     array.forEach(box => {
-    //         output += <div style='color: blue; height: 50px' ></div>
-    //         console.log(box.color)
-    //     });
-    //     return output;
-    // }
-
+    };
 
 
 
@@ -40,7 +29,7 @@ const ColorBox = (props) => {
                     <label className='form-control'>Set Box Size :</label>
                     <input className='form-control' type='text' value={size} onChange={(e) => setSize(e.target.value)}/>
                 </div>
-                <input className='form-control' type='submit' value='Make My box'/>
+                <input className='form-control bg-primary' type='submit' value='Make My box'/>
 
             </form>
 
