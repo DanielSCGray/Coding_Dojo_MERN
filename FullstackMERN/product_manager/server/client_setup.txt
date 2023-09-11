@@ -1,0 +1,6 @@
+npm install cors
+
+client folder creation: 
+npx create-react-app client
+cd client
+npm install axios
