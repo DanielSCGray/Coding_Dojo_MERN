@@ -1,6 +1,8 @@
 import {Route, Routes} from 'react-router-dom';
 import './App.css';
-import ProductForm from './components/ProductForm';
+import Home from './views/Home';
+import DisplayProduct from './components/DisplayProduct';
+
 
 function App() {
   return (
@@ -8,8 +10,10 @@ function App() {
       <h1>Product Manager</h1>
 
       <Routes>
-        <Route path='/products' element={<ProductForm />} />
+        <Route path='/products' element={<Home />} />
+        <Route path='/products/:id' element={<DisplayProduct />} />
       </Routes>
+      
     </div>
   );
 }
