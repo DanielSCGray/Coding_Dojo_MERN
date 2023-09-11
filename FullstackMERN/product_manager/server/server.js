@@ -16,9 +16,9 @@ require('./config/mongoose.config');
 
 app.use(express.json(), express.urlencoded({extended: true}));
 
-//replace *product* and uncomment.
-// const AllProductRoutes = require('./routes/product.routes');
-// AllProductRoutes(app);
+
+const AllProductRoutes = require('./routes/product.routes');
+AllProductRoutes(app);
 
 
 
