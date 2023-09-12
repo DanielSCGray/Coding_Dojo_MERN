@@ -8,4 +8,5 @@ module.exports = app => {
     app.patch('/api/subjectnames/:id', SubjectnameController.updateSubjectname);
     app.post('/api/subjectnames', SubjectnameController.createSubjectname);
     app.delete('/api/subjectnames/:id', SubjectnameController.deleteOneSubjectname);
+    app.put('/api/subjectnames/:id', SubjectnameController.updateSubjectname);
 }
