@@ -2,13 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 require('dotenv').config();
-/*
-commandline setup: 
-npm init -y
-npm install mongoose express dotenv
-npm install cors
-nodemon server.js
-*/
+
 
 const port = process.env.PORT;
 

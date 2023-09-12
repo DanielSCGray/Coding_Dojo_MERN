@@ -6,6 +6,7 @@ import AuthorForm from '../components/AuthorForm';
 const EditAuthor = (props) => {
 
     const [name, setName] = useState('');
+    const [errorMsg, setErrorMsg] = useState('');
     const {id} = useParams();
     const navigate = useNavigate();
 
@@ -27,13 +28,17 @@ const EditAuthor = (props) => {
                 console.log(res);
                 navigate('/authors')
             })
-            .catch(err=>console.log(err))
+            .catch(err=>{
+                setErrorMsg(err.response.data.message)
+            })
     }
 
 
     return (
         <div className='m-3'>
             <Link to={'/authors'} >Home</Link>
+            <h4>Edit this author:</h4>
+            <div>{errorMsg}</div>
             <AuthorForm action={makeEdit} authorName={name} />
         </div>
     )

@@ -1,4 +1,4 @@
-//use change all occurances of author. Add or remove functions as needed
+
 const Author = require('../models/author.model');
 
 
@@ -26,11 +26,11 @@ module.exports.findOneAuthor = (req, res) => {
 // create
 
 module.exports.createAuthor = (req, res) => {
-    Author.create(req.body)
+    Author.create(req.body, )
         .then(newAuthor => {
             res.json(newAuthor)
         })
-        .catch(err =>res.json(err));
+        .catch(err =>res.status(400).json(err));
 }
 
 //update 
@@ -40,7 +40,7 @@ module.exports.updateAuthor = (req, res) => {
         .then((updatedAuthor) => {
             res.json(updatedAuthor)
         })
-        .catch(err =>res.json(err));
+        .catch(err =>res.status(400).json(err));
 }
 
 

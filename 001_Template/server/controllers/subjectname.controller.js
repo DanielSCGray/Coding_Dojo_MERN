@@ -30,7 +30,7 @@ module.exports.createSubjectname = (req, res) => {
         .then(newSubjectname => {
             res.json({subjectname: newSubjectname})
         })
-        .catch(err =>res.json(err));
+        .catch(err =>res.status(400).json(err));
 }
 
 //update 
@@ -40,7 +40,7 @@ module.exports.updateSubjectname = (req, res) => {
         .then((updatedSubjectname) => {
             res.json({subjectname: updatedSubjectname})
         })
-        .catch(err =>res.json(err));
+        .catch(err =>res.status(400).json(err));
 }
 
 
