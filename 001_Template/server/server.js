@@ -17,8 +17,8 @@ require('./config/mongoose.config');
 app.use(cors(), express.json(), express.urlencoded({extended: true}));
 
 //replace *subjectname* and uncomment.
-// const AllSubjectnameRoutes = require('./routes/subjectname.routes');
-// AllSubjectnameRoutes(app);
+// const SubjectnameRoutes = require('./routes/subjectname.routes');
+// SubjectnameRoutes(app);
 
 
 
