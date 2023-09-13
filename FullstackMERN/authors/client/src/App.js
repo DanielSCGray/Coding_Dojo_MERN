@@ -10,6 +10,7 @@ function App() {
             <h1>Favorite Authors</h1>
 
             <Routes>
+            <Route path='/' element={<AuthorList />} />
                 <Route path='/authors' element={<AuthorList />} />
                 <Route path='/authors/new' element={<NewAuthor />} />
                 <Route path='/edit/:id' element={<EditAuthor />} />
