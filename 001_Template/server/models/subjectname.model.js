@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-//change all occurance from subject name
+//change all occurance from subjectname
 
 const SubjectnameSchema = new mongoose.Schema({
     set_up: {
