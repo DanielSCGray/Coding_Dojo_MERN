@@ -8,7 +8,7 @@ const Subjectname = require('../models/subjectname.model');
 module.exports.findAllSubjectnames = (req, res) => {
     Subjectname.find()
         .then((allSubjectnames) => {
-            res.json({subjectnames: allSubjectnames})
+            res.json(allSubjectnames)
         })
         .catch(err =>res.json(err));
 }
@@ -18,7 +18,7 @@ module.exports.findAllSubjectnames = (req, res) => {
 module.exports.findOneSubjectname = (req, res) => {
     Subjectname.findOne({_id: req.params.id})
         .then((oneSubjectname) => {
-            res.json({subjectname: oneSubjectname})
+            res.json(oneSubjectname)
         })
         .catch(err =>res.json(err));
 }
@@ -28,7 +28,7 @@ module.exports.findOneSubjectname = (req, res) => {
 module.exports.createSubjectname = (req, res) => {
     Subjectname.create(req.body)
         .then(newSubjectname => {
-            res.json({subjectname: newSubjectname})
+            res.json(newSubjectname)
         })
         .catch(err =>res.status(400).json(err));
 }
@@ -38,7 +38,7 @@ module.exports.createSubjectname = (req, res) => {
 module.exports.updateSubjectname = (req, res) => {
     Subjectname.findOneAndUpdate({_id: req.params.id}, req.body, {new: true, runValidators: true})
         .then((updatedSubjectname) => {
-            res.json({subjectname: updatedSubjectname})
+            res.json(updatedSubjectname)
         })
         .catch(err =>res.status(400).json(err));
 }
@@ -49,7 +49,7 @@ module.exports.updateSubjectname = (req, res) => {
 module.exports.deleteOneSubjectname = (req, res) => {
     Subjectname.findByIdAndDelete(req.params.id)
         .then((deletedSubjectname) => {
-            res.json({subjectname: deletedSubjectname})
+            res.json(deletedSubjectname)
         })
         .catch(err =>res.json(err));
 }

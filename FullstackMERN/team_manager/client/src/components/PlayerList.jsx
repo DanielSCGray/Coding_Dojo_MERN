@@ -8,7 +8,7 @@ export const PlayerList = () => {
     const [allPlayers, setAllPlayers] = useState([]);
 
     useEffect( () => {axios.get('http://localhost:8000/api/players')
-        .then(response => setAllPlayers(response.data.players))
+        .then(response => setAllPlayers(response.data))
         .catch(err => console.log(err))
 }, []);
 
@@ -23,6 +23,7 @@ export const PlayerList = () => {
         setAllPlayers(filteredList)
 
     }
+    console.log(allPlayers)
 
     return (
         <div>

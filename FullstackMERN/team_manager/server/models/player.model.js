@@ -23,7 +23,8 @@ const PlayerSchema = new mongoose.Schema({
     game3: {
         type: String,
         default: 'undecided'
-    }
+    },
+    
 
 }, {timestamps: true});
 
