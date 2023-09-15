@@ -24,6 +24,7 @@ export const PlayerStatus = (props) => {
     }
 
     const updateDOM = (changeidx, id, game, stat) => {
+        console.log(allPlayers)
         const preList = allPlayers.slice(0, changeidx);
         const postList = allPlayers.slice((changeidx+1));
         const updatedPlayer = allPlayers.filter(eachPlayer => eachPlayer._id == id)
