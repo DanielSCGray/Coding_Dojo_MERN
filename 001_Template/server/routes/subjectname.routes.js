@@ -1,4 +1,4 @@
-//change all occurances of subject name. Add or delete routes as required
+//change all occurances of subjectname. Add or delete routes as required
 
 const SubjectnameController = require('../controllers/subjectname.controller');
 

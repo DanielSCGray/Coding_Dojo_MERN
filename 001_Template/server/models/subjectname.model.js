@@ -3,16 +3,27 @@ const mongoose = require('mongoose');
 //change all occurance from subjectname
 
 const SubjectnameSchema = new mongoose.Schema({
-    set_up: {
+    strkey: {
         type: String,
-        required: [true, 'Set up is required'],
-        minlength: [5, 'Set up must be at least 5 characters']
+        required: [true, 'Strkey is required'],
+        minlength: [2, 'Strkey must be at least 2 characters']
     },
-    punchline: {
+    strkey: {
         type: String,
-        required: [true, 'Punchline is required'],
-        minlength: [2, 'Punchline must be at least 2 characters']
-    }
+        required: [true, 'Strkey is required'],
+        minlength: [2, 'Strkey must be at least 2 characters']
+    },
+    numkey: {
+        type: Number,
+        required: [true, 'Numkey is required'],
+        min: [0, 'Numkey must not be negative']
+    },
+    boolkey: {
+        type: Boolean,
+        required: [true, 'Boolkey is required'],
+        default: true
+    },
+
 }, {timestamps: true});
 
 const Subjectname = mongoose.model('Subjectname', SubjectnameSchema);
